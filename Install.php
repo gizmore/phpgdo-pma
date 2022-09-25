@@ -2,6 +2,7 @@
 namespace GDO\PMA;
 
 use GDO\Util\Random;
+use GDO\Core\Website;
 
 final class Install
 {
@@ -38,7 +39,7 @@ final class Install
 		$destination = $module->filePath('phpmyadmin/config.inc.php');
 		file_put_contents($destination, $content);
 		
-		$module->mess
+		Website::message('PhpMyAdmin Install', 'msg_pma_installed');
 	}
 	
 }
