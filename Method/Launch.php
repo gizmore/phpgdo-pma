@@ -1,6 +1,7 @@
 <?php
 namespace GDO\PMA\Method;
 
+use GDO\Core\GDT;
 use GDO\Core\Method;
 
 /**
@@ -13,7 +14,7 @@ use GDO\Core\Method;
 final class Launch extends Method
 {
 
-	public function execute()
+	public function execute(): GDT
 	{
 		$href = $this->getModule()->wwwPath('phpmyadmin');
 		return $this->redirect($href);
