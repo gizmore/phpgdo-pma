@@ -20,7 +20,7 @@ final class Install
 
 		# secret
 		$blowfish = Random::randomKey(32);
-		$content = preg_replace('/$cfg\\[\'blowfish_secret\'\\] = \'\'/iD', '$cfg[\'blowfish_secret\'] = \'' . $blowfish . '\'', $content);
+		$content = preg_replace('/cfg\\[\'blowfish_secret\'\\] = \'\'/iD', 'cfg[\'blowfish_secret\'] = \'' . $blowfish . '\'', $content);
 
 		# credentials
 // 		$content = preg_replace('#// $cfg[\'Servers\'][$i][\'controlhost\'] = \'\';#iD',
